@@ -1,0 +1,24 @@
+@model IEnumerable<SalesWebMvc.Models.Department>
+
+@{ViewData["Title"] = "Department";}
+
+<h2>Departaments</h2>
+<p> <a asp-action="Create">Create new</a></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+        </tr>
+    </thead>
+</table>
+@foreach(var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Id)
+        </td>
+        <td>@Html.DisplayNameFor(model => model.Name)</td>
+    </tr>
+}
